@@ -38,6 +38,11 @@ public class Gui {
 
                 Scanner scanner1 = new Scanner(System.in);
                 System.out.println("Podaj jakie Id ma miec hulajnoga: ");
+                while(!scanner1.hasNextInt()){
+                    System.out.println("To nie jest liczba całkowita.");
+                    System.out.print("Podaj liczbe całkowita: ");
+                    scanner1.next();
+                }
                 int  IdTemp1 = scanner1.nextInt();
                 scooter.setId(IdTemp1);
                 System.out.println("Podaj marke jaka chcesz dodac: ");
