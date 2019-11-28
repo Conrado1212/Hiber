@@ -23,6 +23,7 @@ public class ScooterRepository {
     }
     public  static  Scooter getScooter(int Id){
         Session session = factory.openSession();
+
         Scooter scooter =
                 (Scooter) session.createQuery("FROM pl.edu.wszib.model.Scooter WHERE id = " + Id).uniqueResult();
 
@@ -77,5 +78,15 @@ public class ScooterRepository {
         List<Scooter> allScooter = session.createQuery("FROM pl.edu.wszib.model.Scooter ").list();
 
         return allScooter;
+    }
+
+    public static List<Scooter> getAllScooterFiat() {
+        Session session = factory.openSession();
+
+        List<Scooter> allScooterFiat =
+                session.createQuery("FROM pl.edu.wszib.model.Scooter Where brand = 'Fiat'").list();
+
+        return allScooterFiat;
+
     }
 }

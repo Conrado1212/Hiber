@@ -11,8 +11,8 @@ public class Main {
       //  Scooter scooter = new Scooter(1,"Xiaomi","MiJia M365 Pro",50);
 
      //   ScooterRepository.addScooter(scooter);
-        Scooter scooter1 = ScooterRepository.getScooter(1);
-        System.out.println(scooter1);
+     //   Scooter scooter1 = ScooterRepository.getScooter(1);
+    //    System.out.println(scooter1);
 
       /*  List<Scooter> allScooters = ScooterRepository.getAllScooters();
         System.out.println("Lista");
