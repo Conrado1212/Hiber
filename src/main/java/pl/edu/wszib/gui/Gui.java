@@ -37,22 +37,31 @@ public class Gui {
             case "1":
 
                 Scanner scanner1 = new Scanner(System.in);
+
                 System.out.println("Podaj jakie Id ma miec hulajnoga: ");
                 while(!scanner1.hasNextInt()){
                     System.out.println("To nie jest liczba całkowita.");
-                    System.out.print("Podaj liczbe całkowita: ");
+                    System.out.println("Podaj liczbe całkowita: ");
                     scanner1.next();
                 }
                 int  IdTemp1 = scanner1.nextInt();
                 scooter.setId(IdTemp1);
+
                 System.out.println("Podaj marke jaka chcesz dodac: ");
                 scanner1.nextLine();
                 String brandTemp1 = scanner1.nextLine();
                 scooter.setBrand(brandTemp1);
+
                 System.out.println("Podaj model jaki chcesz dodac: ");
                 String modelTemp1 = scanner1.nextLine();
                 scooter.setModel(modelTemp1);
+                
                 System.out.println("Podaj cena za godzine jazdy: ");
+                while(!scanner1.hasNextInt()){
+                    System.out.println("To nie jest liczba calkowita.");
+                    System.out.println("Podaj cene jako liczbe calkowita: ");
+                    scanner1.next();
+                }
                 int priceTemp1 = scanner1.nextInt();
                 scooter.setPrice(priceTemp1);
                 ScooterRepository.addScooter(scooter);
